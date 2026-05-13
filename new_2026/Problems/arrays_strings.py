@@ -76,7 +76,7 @@ nums = [4,2,7,8,90,3]
 
 """STRINGS"""
 
-"""Given a string, check if it is a palindrome (ignore spaces, punctuation, case)."""
+"""1.  Given a string, check if it is a palindrome (ignore spaces, punctuation, case)."""
 def palindrome(str):
     str = ''.join(c.lower() for c in str if c.isalnum())  # remove spaces/punctuation and lowercase
     if str == str[::-1]:  # compare string with its reverse
@@ -86,7 +86,7 @@ def palindrome(str):
 str = 'madam im adam'
 (palindrome(str))
 
-"""Given a string, find the first non-repeating character and return its index. If none, return -1."""
+"""2.  Given a string, find the first non-repeating character and return its index. If none, return -1."""
 def str_occur(str):
     for i in range(len(str)):        # loop through each index
         if str.count(str[i]) == 1:   # check if this character appears exactly once in the string
@@ -97,7 +97,7 @@ str = ['leetcode', 'aabb']
 for i in str:
     (str_occur(i))
 
-"""Given two strings, check if one is an anagram of the other."""
+"""3.  Given two strings, check if one is an anagram of the other."""
 def anagram(str1, str2):
     return sorted(str1) == sorted(str2)
 
@@ -105,7 +105,7 @@ str1 = 'abdc'
 str2 = 'bacd'
 (anagram(str1, str2))
 
-"""Given a sentence string, reverse the order of words. (e.g. "hello world" → "world hello")"""
+"""4.  Given a sentence string, reverse the order of words. (e.g. "hello world" → "world hello")"""
 def reverse_words(str):
     str = str.split()              # split string into list of words by spaces
     new_str = str[::-1]            # reverse the list of words
@@ -115,7 +115,7 @@ def reverse_words(str):
 str = 'hello bye hola'
 (reverse_words(str))
 
-"""Given a string, count the number of vowels and consonants in it."""
+"""5.  Given a string, count the number of vowels and consonants in it."""
 def substring_vc(str):
     vowels = 'a','e','i','o','u'  # tuple of vowels to check against
     count_v = 0                    # vowel counter
