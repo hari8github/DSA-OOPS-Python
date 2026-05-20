@@ -49,4 +49,4 @@ def digit_sum(val):
     else:
         x = val % 10                    # extract last digit
         return x + digit_sum(val // 10) # add last digit to sum of remaining digits
-print(digit_sum(12345))
+(digit_sum(12345))
