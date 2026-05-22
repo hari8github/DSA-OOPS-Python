@@ -78,3 +78,29 @@ def binary_search_range_based(target, L, R):
 (binary_search_range_based(123,1,200))
 
 """5) Given a sorted array rotated at some pivot, find a target value."""
+
+def rotated_search(arr, target):
+    L = 0
+    R = len(arr) - 1
+
+    while L <= R:                        # valid search space exists
+        M = (L + R) // 2
+
+        if arr[M] == target:             # found target
+            return M
+
+        if arr[L] <= arr[M]:             # left half is sorted
+            if arr[L] <= target < arr[M]:  # target within left sorted half
+                R = M - 1               # search left
+            else:
+                L = M + 1               # search right
+        else:                            # right half is sorted
+            if arr[M] < target <= arr[R]:  # target within right sorted half
+                L = M + 1               # search right
+            else:
+                R = M - 1               # search left
+
+    return -1                            # target not found
+
+nums = [6,7,8,1,2,3,4,5]
+(rotated_search(nums, 0))
