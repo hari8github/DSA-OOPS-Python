@@ -122,4 +122,4 @@ def selection_sort(arr):
         print("Index", i, ":", arr[i])   # print each element with its final index
 
 nums = [64, 25, 12, 22, 11]
-selection_sort(nums)     
+#selection_sort(nums)     
