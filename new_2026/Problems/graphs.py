@@ -9,7 +9,6 @@ graph = {
 
 """1) Given an adjacency list, print all nodes reachable from a starting node using BFS."""
 from collections import deque
-from math import dist
 def bfs_adjacency(graph):
     q = deque()
     seen = set()
@@ -102,4 +101,4 @@ def bfs_distance(graph, source, destination):
 
     return distance[destination]   # return shortest hop count to destination
 
-print(bfs_distance(graph, 1, 4))
+(bfs_distance(graph, 1, 4))
