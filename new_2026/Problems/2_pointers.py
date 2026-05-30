@@ -1,8 +1,5 @@
 """1) Given a sorted array and a target, find two numbers that add up to the target. Return their indices."""
 
-from tabnanny import check
-
-
 def sum_target(arr, target):
     left = 0
     right = len(arr) - 1       # start pointers at both ends
